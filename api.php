@@ -52,7 +52,7 @@ if($_POST['task'] == 'quickContactSend'){
 
 function sendMail($inputs){
 	
-	$mailaddress = 'wordpress.admin@cuttermay.com';
+	$mailaddress = 'rycuMMXVII@cuttermail.co.uk';
 	
 	$mailsubject = 'Message from the '.$_SERVER['SERVER_NAME'].' Contact Form';
 	
