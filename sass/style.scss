@@ -1,0 +1,136 @@
+/*
+Theme Name: Near PerfectionX
+Theme URI: http://underscores.me/
+Author: Ryan Cutter
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: near_perfection
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Near Perfection is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import '../bower_components/normalize-css/normalize';
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Partials
+--------------------------------------------------------------*/
+@import "partials/header";
+@import "partials/content";
+@import "partials/footer";
+
+/*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
+@import "../bower_components/font-awesome/scss/variables";
+$fa-font-path:"fonts";
+@import "../bower_components/font-awesome/scss/mixins";
+@import "../bower_components/font-awesome/scss/path";
+@import "../bower_components/font-awesome/scss/core";
+@import "../bower_components/font-awesome/scss/larger";
+@import "../bower_components/font-awesome/scss/fixed-width";
+@import "../bower_components/font-awesome/scss/list";
+@import "../bower_components/font-awesome/scss/bordered-pulled";
+@import "../bower_components/font-awesome/scss/animated";
+@import "../bower_components/font-awesome/scss/rotated-flipped";
+@import "../bower_components/font-awesome/scss/stacked";
+@import "font-awesome/icons";
+@import "../bower_components/font-awesome/scss/screen-reader";
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@import "responsive/responsive";

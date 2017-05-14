@@ -1,0 +1,50 @@
+
+#wpadminbar{
+	background-color: rgba(0,0,0,0.5);
+	border-bottom: 1px dashed #fff;
+}
+
+
+.site-header{
+	background-color: pink;
+}
+
+
+.site-branding{
+
+	//float:left;
+	width: 75%;
+
+	.site-title{
+
+	}
+
+	.site-description{
+		display: none;
+		position: absolute;
+		left: 1.65em;
+		top: 1em;
+		margin: 0;
+	}
+
+}
+
+.site-branding a{
+
+	position: absolute;
+	left: 1em;
+	top: 1em;
+	width: 228px;
+	display: block;
+
+	img{
+		//height: 100%;
+	}
+
+}
+
+#socnetHeader{
+
+	display: none;
+	a{@extend .fa, .fa-fw};	
+}

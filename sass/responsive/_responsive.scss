@@ -1,0 +1,337 @@
+@media screen and (min-width: 60em) {
+
+
+	//HEADER//
+
+	#masthead{
+		z-index: 50;
+		position: fixed;
+		width: 100%;
+		top:0;
+		border-bottom: 1px solid #ddd;			
+	}
+
+	.site-branding{
+		//position: relative;
+		height: 10em;
+
+		.site-description{
+			display: block;
+		}
+	}
+
+	.site-branding a{
+
+		top: auto;
+		bottom: 1.65em;
+		left: 1.65em;
+		width: 456px;
+		img{
+			height: 100%;
+			max-width: none;
+			
+		}
+
+	}
+
+	//HEADER END//
+
+	//SOCNET//
+
+	#socnetHeader{
+
+		display: block;
+		position: absolute;
+		right: 1.4em;
+		top: 0.5em;
+		
+		a{
+			font-size: 1.2em;
+			border-radius: 50%;
+			width: 2em;
+			height: 2em;
+			line-height: 2.1em;
+			color: #666;
+			text-decoration: none;
+
+			&:hover{
+				color: white;
+
+				&.fa-facebook{
+					background-color: $color__facebookBlue;
+				}
+				&.fa-twitter{
+					background-color: $color__twitterBlue;
+				}
+			}
+		}
+
+	}
+
+	//SOCNET END//
+
+
+	//MENU//
+
+	.main-navigation .menu-toggle {
+		display: none;
+	}
+
+	.main-navigation div#primary-menu ul, .main-navigation ul#primary-menu{
+	 	display: block;
+	 	width: auto;
+	 	background-color: transparent;
+	 	text-transform: uppercase;
+	 	font-size: 0.8em;
+	 	position: absolute;
+	 	bottom: 0;
+	 	right: 1em;
+
+		li{
+
+			width: auto;
+			&:hover{
+				a{color: white}
+				background-color: $color__nav-d1;
+			
+			}
+			&.focus{
+				a{color: white;}
+				background-color: $color__nav-d1;
+			}
+		}
+
+
+
+
+		a{
+	 		border: 0;
+	 		color: #000066;
+	 		padding: 2.35em 0.7em;
+
+	 	}
+
+
+	 	.current-menu-item{
+				//a{text-decoration: underline}
+		}
+
+		ul{
+			background-color: transparent;
+		}
+
+		.page_item_has_children, .menu-item-has-children{
+
+			a:before{content: none}
+
+			.childBtn{
+				display: none;
+
+			}
+			.childBtn + a{
+				&:after{
+					margin-left: 0.5em;
+					content: ' \f107';
+				}
+				text-overflow: clip;
+  				overflow: visible;
+
+			}
+
+			&:hover{
+				ul{display:block};
+				ul ul{display:none};
+			}
+			&.focus{
+				ul{display:block};
+				ul ul{display:none};
+				.focus{
+					ul{display:block};
+				}
+			}
+
+			li{
+				background-color: rgba($color__nav-d1, .85 );
+				&:hover{
+					background-color: lighten($color__nav-d2, 2%);
+				}
+				&.focus{
+					background-color: lighten($color__nav-d2, 2%);
+				}
+				a{
+					padding: 1em;
+				}
+
+			}
+			.page_item_has_children, .menu-item-has-children{
+				.childBtn + a{
+					&:after{
+						margin-left: 0.5em;
+						content: ' \f105';
+					}	
+				}
+
+				&:hover{
+					ul{display:block};
+				}
+			}
+
+		}
+
+
+		ul{
+			//display: none;
+
+			min-width: 10em;
+			white-space: normal;
+
+			position: absolute;
+			top:100%;
+
+			width: auto;
+
+			li{
+				width: 100%;
+			}
+
+			ul{
+				display: none;
+				top:0;
+				left:100%;
+			}
+
+			a{
+				color: white;
+			}
+
+			
+			
+		}
+
+	}
+	//MENU END//
+
+	//MAIN//
+
+	.site-main{
+		padding-top: 5em;
+		margin-top: 5em;
+	
+		.hentry{
+			//max-width: 80em;
+			padding: 1em 10%;
+		}
+
+	}
+
+
+
+
+	//MAIN END//
+
+
+	//FOOTER//
+
+	.site-footer{
+		#mediaBar{
+			height: 400px;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			flex-direction: column;
+			.triBucket{
+				 // width: 48%;
+				 // max-width: 40em;
+
+				 width: 31%;
+				 max-width: 33.5em;
+
+				 padding: 0 3%;
+				 margin-top: 2em;
+			}
+		}
+	
+
+			#contactBox{
+				label{
+					.valMsg{
+						font-size: 0.8em;
+					}
+				}
+		 	}
+
+			#recentBox{
+				ul{
+					height: 434px;
+					overflow: scroll;
+					overflow-y: scroll;
+					overflow-x: hidden;
+				}
+			}
+			
+		// }
+
+		#bottomLine{
+			padding: 0 2em;
+			display: flex;
+			justify-content: space-between;
+			.triBucket{
+				width:33%;
+			}
+
+			li{
+				margin: 1em 2%;
+			}
+
+			#socnet-footer{
+				order: 2;
+			}
+
+			#footer-navigation{
+				margin-top: 0.3em;
+				order: 3;
+				ul{
+					text-align: right;
+				}
+			}
+
+			#site-info{
+				margin-top: 0.3em;
+				order: 1;
+				ul{
+					text-align: left;
+				}
+			}
+		}
+
+		
+	}
+	//FOOTER END//
+
+
+}
+
+
+
+@media screen and (min-width: 64em) {
+
+	.main-navigation div#primary-menu ul, .main-navigation ul#primary-menu{
+
+		a{
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+}
+
+
+
+.wp-admin{
+	h1{
+		content: 'Woo!';
+		color: blue;
+	}
+}
+
+

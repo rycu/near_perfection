@@ -1,0 +1,241 @@
+
+.site-footer{
+
+	background-color: green;
+	
+
+	button, input[type=submit]{
+		width: 100%;
+		border: 0;
+		font-size: 0.9em;
+		box-shadow: none;
+		text-shadow: none;
+		background-color: gray;
+		color: white;
+		text-transform: uppercase;
+	}
+
+	.search-field{
+		margin-bottom: 0.4em;
+	}
+
+}
+
+#mediaBar{
+	
+	h3{
+		letter-spacing: 0.1em;
+		color: #fff;
+		//text-shadow: 1px 1px #000;
+		text-align: center;
+		&:before{
+			@extend .fa;
+			margin-right: 0.2em;
+		}
+		
+	}
+
+	#footer-map{
+		h3:before{
+			@extend .fa-map;
+		}
+	}
+
+	#twitterBox{
+		h3:before{
+			@extend .fa-twitter;
+			
+		}
+	}
+
+	#searchBox{
+		h3:before{
+			@extend .fa-search;
+			
+		}
+		input{
+			width: 100%;
+			padding-left: 0.5em;
+		}
+	}
+
+	#contactBox{
+
+		h3:before{
+			@extend .fa-envelope-o;	
+		}
+
+		label{
+			display: block;
+			margin: 0.5em 0 0.2em 0;
+		}
+
+		input{
+			width: 100%;
+			padding-left: 0.5em;
+		}
+
+		select{
+			width: 100%;
+			padding: 0.5em;
+			height: 2em;
+		}
+
+		.valMsg{
+			color: white;
+		}
+
+		#msgSent{
+			h2{
+				margin-top: 2em;
+				&:before{
+					@extend .fa, .fa-paper-plane-o;
+					margin-right: 0.4em;
+				}
+				color: white;
+			}
+			color: white;
+			text-align: center;
+
+		}
+
+
+	}
+
+	#recentBox{
+		h3:before{
+			@extend .fa-clock-o;
+			color: white;
+		}
+
+		ul{
+			background-color:#333333;
+			border-radius: 5px;
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			//height: 360px;
+			//overflow: scroll;
+			//overflow-y: scroll;
+			//overflow-x: hidden;
+		}
+
+		li{
+			position: relative;
+			padding: 10px 20px;
+			text-align: left;
+			border-bottom: 1px solid #444;
+		}
+
+		a{
+			position: absolute;
+			right: 20px;
+			bottom: 10px;
+			color: #fff;
+			font-size: 14px;
+		}
+
+		a:hover{
+			text-decoration: underline;
+		}
+
+		p{
+			color: #cfcfcf;
+			margin: 0;
+			font-size: 12px;
+		}
+
+		p:before{
+			@extend .fa, .fa-calendar;
+			margin-right: 0.5em;
+		}
+
+		h6{
+			color: #ffffff;
+			margin: 0 0 20px;
+			font-size: 14px;
+			font-weight: normal;
+		}
+
+
+
+	}
+
+	.triBucket{
+		padding: 1em;
+	}
+}
+
+#bottomLine{
+
+	color: #ccc;
+	font-size: 0.8em;
+	background-color: darkgreen;
+
+	ul{
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		display: inline-block;
+		margin: 1em 5%;
+	}
+
+
+	a{
+		color: #ccc;
+		text-decoration: none;
+		padding: 0.4em 0.6em;
+		border-radius: 0.4em;
+		&:hover{
+			color: #333;
+			background-color: #ccc;
+
+		}
+
+		&:visited{
+			color: #ccc;
+			&:hover{
+				color: #333;
+			}
+		}
+	}
+
+	#footer-navigation{
+
+	}
+
+	#socnet-footer{
+		font-size: 1.2em;
+		a{
+			&:before{
+				@extend .fa, .fa-fw;
+			}
+
+			&:hover{
+
+				color: white;
+
+				&.fa-facebook{
+					background-color: $color__facebookBlue;
+				}
+				&.fa-twitter{
+					background-color: $color__twitterBlue;
+				}
+				&.fa-youtube{
+					background-color: $color__youtubeRed;
+				}
+				&.fa-google-plus{
+					background-color: $color__gplusRed;
+				}
+			}
+
+		}
+
+
+	}
+
+}
