@@ -1,5 +1,4 @@
 <?
-
 class Mail extends MailParts{
 
 	private $mailFrom;
@@ -7,7 +6,6 @@ class Mail extends MailParts{
 	private $boundary;
 	private $imagePath;
 	private $masterTemplate;
-
 
 	function __construct() {
 		
@@ -19,7 +17,6 @@ class Mail extends MailParts{
 		include __DIR__.'/../eml/masterTemplate.php';
 		$this->masterTemplate = ob_get_clean();
 	}
-	
 	
 	private function getPlaintext($htmlIn){
 	
@@ -40,10 +37,8 @@ class Mail extends MailParts{
 		$templateIn =  str_replace('MAIN_MESSAGE', 	$msg, $templateIn );
 		$templateIn =  str_replace('FOOTER_TEXT', 	$this->footer, $templateIn );
 		
-		
 		return $templateIn;
 	}
-	
 	
 	private function getHeaders(){
 	
@@ -55,7 +50,6 @@ class Mail extends MailParts{
 		
 		return $headers;
 	}
-	
 	
 	private function getMessageBlock($sub, $msg){
 	
@@ -74,18 +68,11 @@ class Mail extends MailParts{
 		return $message;
 	}
 	
-
-
 	public function sendMasterTemplate($to, $sub, $msg) {
 	
 		mail($to, $this->mailSubject.' '.$sub, $this->getMessageBlock($sub, $msg), $this->getHeaders());
 	
 	}
-
 	
-
-
-
 }
-
 ?>
