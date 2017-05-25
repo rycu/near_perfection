@@ -3,7 +3,6 @@ spl_autoload_register(function ($class){
     include __DIR__.'/cls/' . $class . '.class.php';
 });
 
-
 function validateValue($name, $value) {
 
 	$regexListArr = array (
@@ -52,7 +51,8 @@ if($_POST['task'] == 'quickContactSend'){
 
 function sendMail($inputs){
 	
-	$mailaddress = 'rycuMMXVII@cuttermail.co.uk';
+	//TEMP EMAIL ACC from maildrop.cc
+	$mailaddress = 'near_perfection@maildrop.cc';
 	
 	$mailsubject = 'Message from the '.$_SERVER['SERVER_NAME'].' Contact Form';
 	

@@ -1,5 +1,4 @@
 <?
-
 class Mail extends MailParts{
 
 	private $mailFrom;
@@ -56,7 +55,7 @@ class Mail extends MailParts{
 		return $headers;
 	}
 	
-	
+
 	private function getMessageBlock($sub, $msg){
 	
 		$htmlMsg = $this->templatefill($sub, $msg);
@@ -74,18 +73,11 @@ class Mail extends MailParts{
 		return $message;
 	}
 	
-
-
 	public function sendMasterTemplate($to, $sub, $msg) {
 	
 		mail($to, $this->mailSubject.' '.$sub, $this->getMessageBlock($sub, $msg), $this->getHeaders());
 	
 	}
 
-	
-
-
-
 }
-
 ?>

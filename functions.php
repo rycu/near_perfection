@@ -7,15 +7,20 @@
  * @package Near_Perfection
  */
 
+/**
+ * AUTO DEV MODE - Define you local hostname
+ */
 $devEnv = (gethostname() == 'Ryans-MacBook-Pro.local' ? true : false);
 $templatePath = get_template_directory_uri();
 $currentFile = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
 
-
+/**
+ * Preload links
+ */
 if (!is_admin() && $currentFile != 'wp-login.php') {
 	header("Link: <".$GLOBALS['templatePath']."/script.js>; rel=preload; as=script", false);
-	//header("Link: </wp-includes/js/wp-embed.min.js?ver=".get_bloginfo('version').">; rel=preload; as=script", false);
-	header("Link: <".$GLOBALS['templatePath']."/fonts/fontawesome-webfont.woff2?v=4.6.3>; rel=preload; as=font; crossorigin; type=font/woff2", false);
+	header("Link: <./wp-includes/js/wp-embed.min.js?ver=".get_bloginfo('version').">; rel=preload; as=script", false);
+	header("Link: <".$GLOBALS['templatePath']."/fonts/fontawesome-webfont.woff2?v=4.7.0>; rel=preload; as=font; crossorigin; type=font/woff2", false);
 }
 
 function my_login_logo() { ?>
@@ -60,7 +65,6 @@ function my_custom_admin_head() { ?>
 			height: 60px;
 			width: 60px;
 			content: '';
-			
 		}
 	</style>
 <? }
@@ -164,16 +168,6 @@ add_action( 'widgets_init', 'near_perfection_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-
-// function wcs_defer_javascripts ($url) 
-// {
-//     if (strpos($url, '.js') === FALSE) { 
-//         return $url;
-//     }
-//     return "$url' async '";
-// }
-// add_filter('clean_url', 'wcs_defer_javascripts', 11, 1);
-
 function defer_parsing_of_js ( $url ) {
     if ( FALSE === strpos( $url, '.js' ) ) return $url;
     if ( strpos( $url, 'jquery.js' ) ) return $url;
@@ -182,24 +176,7 @@ function defer_parsing_of_js ( $url ) {
 }
 add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 
-
 function near_perfection_scripts() {
-	
-	//DISSABLED FOR INLINE
-	//wp_enqueue_style( 'near_perfection-style', get_stylesheet_uri() );
-	
-	
-
-	// if($GLOBALS['devEnv']){
-			
-
-	// 	if ($_SERVER['SERVER_NAME'] != 'localhost') {
-	// 		//LIVERELOAD AND JS FOR REMOTE DEV
-	// 		$GLOBALS['templatePath'] = str_replace("localhost", $_SERVER['SERVER_NAME'], $GLOBALS['templatePath']);
-	// 		add_action( 'wp_footer', function(){echo '<script src="https://'.$_SERVER['SERVER_NAME'].':35729/livereload.js?snipver=1"></script>';} );
-	// 	}
-
-	// }	
 	wp_enqueue_script( 'near_perfection-script', $GLOBALS['templatePath'] . '/script.js', array(), null, true );
 	add_action( 'wp_footer', function(){echo '<script>var templateUrl ="'.$GLOBALS['templatePath'].'" </script>';} );
 
@@ -208,13 +185,6 @@ function near_perfection_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'near_perfection_scripts' );
-
-
-// function wpb_add_google_fonts() {
-// 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Cinzel:400,700', false ); 
-// }
-// add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
-
 
 function inline_style() {
 	if($GLOBALS['devEnv']){
@@ -239,9 +209,9 @@ function add_google_analytics() {
 add_action('wp_head', 'add_google_analytics');
 
 
-
-
-
+/**
+ * Favicon Links
+ */
 function blog_favicon() {
 echo
 '<link rel="apple-touch-icon" sizes="180x180" href="'.$GLOBALS['templatePath'].'/favicons/apple-touch-icon.png">',
@@ -252,7 +222,6 @@ echo
 '<link rel="shortcut icon" href="'.$GLOBALS['templatePath'].'/favicons/favicon.ico">',
 '<meta name="msapplication-config" content="'.$GLOBALS['templatePath'].'/favicons/browserconfig.xml">',
 '<meta name="theme-color" content="#ffffff">';
-
 }
 
 add_action('wp_head', 'blog_favicon');
@@ -281,5 +250,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-

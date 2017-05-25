@@ -35,8 +35,8 @@
 		</div><!-- .site-branding -->
 
 		<div id="socnetHeader">
-			<a class="fa-facebook" href="https://www.facebook.com/mantairLtd" aria-label="mantair's facebook page" target="_blank"></a>
-			<a class="fa-twitter" href="https://twitter.com/mantairLtd" aria-label="mantair's twitter page" target="_blank"></a>
+			<a class="fa-facebook" href="https://www.facebook.com/" aria-label="facebook page" target="_blank"></a>
+			<a class="fa-twitter" href="https://twitter.com/" aria-label="twitter page" target="_blank"></a>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">

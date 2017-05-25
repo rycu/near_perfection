@@ -262,7 +262,7 @@
 
 			#recentBox{
 				ul{
-					height: 434px;
+					max-height: 434px;
 					overflow: scroll;
 					overflow-y: scroll;
 					overflow-x: hidden;

@@ -17,10 +17,11 @@
 
 		<div id="mediaBar">
 
+			<!-- #Twitter Feed  -->
 			<!-- <div id="twitterBox" class="triBucket">
 				<h3 id="twitterTitle" class="footerTitle">twitter</h3>
-				<a class="twitter-timeline" href="https://twitter.com/cuttermay" data-widget-id="XXX">Tweets by @cuttermay</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<a class="twitter-timeline" href="https://twitter.com/cuttermay" data-widget-id="XXX">Tweets by @near_perfection</a>
+				<script>TWITTER SCRIPT HERE</script>
 			</div> -->
 
 
@@ -39,13 +40,12 @@
 				<?php get_template_part( 'quickContact' ); ?>
 			</div>
 
-			<!-- <div id="recentBox" class="triBucket">
-				<h3 id="recentTitle" class="footerTitle">Recent Installations</h3>
+			<div id="recentBox" class="triBucket">
+				<h3 id="recentTitle" class="footerTitle">Recent Posts</h3>
 				<ul>
 				
 				<?php
-				
-				$args = array( 'posts_per_page' => '6', 'category' => get_cat_ID('Portfolio') );
+				$args = array( 'posts_per_page' => '6', 'category' => get_cat_ID('pick_a_cat') );
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); 	
 				?>
@@ -60,7 +60,7 @@
 				
 				</ul>
 				</nav>
-			</div> -->
+			</div>
 
 		</div>
 
@@ -70,8 +70,8 @@
 
 			<div id="socnet-footer" class="triBucket">
 				<ul>
-					<li><a class="fa-facebook" href="https://www.facebook.com/XXX" aria-label="XXX's facebook page" target="_blank"></a></li>
-					<li><a class="fa-twitter" href="https://twitter.com/XXX" aria-label="XXX's twitter page" target="_blank"></a></li>
+					<li><a class="fa-facebook" href="https://www.facebook.com/" aria-label="facebook page" target="_blank"></a></li>
+					<li><a class="fa-twitter" href="https://twitter.com/" aria-label="twitter page" target="_blank"></a></li>
 				</ul>
 			</div>
 

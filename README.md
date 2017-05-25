@@ -8,7 +8,6 @@ This Theme was created to provide a launch pad, so that custom wordpress themes 
 
 Feel free to use this theme if you wish but checkout http://underscores.me/ its a great place to start.
 
-
 ## Features
 
 - Responsive (Mobile first)
@@ -16,7 +15,6 @@ Feel free to use this theme if you wish but checkout http://underscores.me/ its 
 - Sass (7-1 style pattern)
 - Font-Awesome integration
 - Favicon structure
-
 
 Demo:
 - https://urix.co.uk/

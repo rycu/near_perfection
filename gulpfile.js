@@ -21,10 +21,8 @@ var config = {
 	rawsvgDir: 'raw_svg',
 	imageDir: 'img',
 	fontDir: 'fonts',
-
 	jsExportFile: 'script',
      sassMainFile: 'style'
-
 }
 
 var scriptList = [	
