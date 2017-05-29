@@ -15,6 +15,10 @@ Feel free to use this theme if you wish but checkout http://underscores.me/ its 
 - Sass (7-1 style pattern)
 - Font-Awesome integration
 - Favicon structure
+- Foundation WAI-ARIA support
+- HTTP/2 Preloads in functions.php
+- Defered JS parsing
+- Gulpfile to concat, minify, pre and post process, watch and reload files (js, sass, php, svg)
 
 Demo:
 - https://urix.co.uk/
