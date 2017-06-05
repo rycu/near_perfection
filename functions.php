@@ -219,7 +219,7 @@ echo
 '<link rel="icon" type="image/png" href="'.$GLOBALS['templatePath'].'/favicons/favicon-16x16.png" sizes="16x16">',
 '<link rel="manifest" href="'.$GLOBALS['templatePath'].'/favicons/manifest.json">',
 '<link rel="mask-icon" href="'.$GLOBALS['templatePath'].'/favicons/safari-pinned-tab.svg" color="#5bbad5">',
-'<link rel="shortcut icon" href="'.$GLOBALS['templatePath'].'/favicons/favicon.ico">',
+'<link rel="shortcut icon" href="'.$GLOBALS['templatePath'].'/favicon.ico">',
 '<meta name="msapplication-config" content="'.$GLOBALS['templatePath'].'/favicons/browserconfig.xml">',
 '<meta name="theme-color" content="#ffffff">';
 }

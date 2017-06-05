@@ -28,7 +28,6 @@ class Mail extends MailParts{
 		return $textOut;
 	}
 	
-	
 	private function templatefill($sub, $msg){	
 	
 		$templateIn = $this->masterTemplate;
@@ -51,7 +50,6 @@ class Mail extends MailParts{
 		return $headers;
 	}
 
-	
 	private function getMessageBlock($sub, $msg){
 	
 		$htmlMsg = $this->templatefill($sub, $msg);
@@ -72,7 +70,6 @@ class Mail extends MailParts{
 	public function sendMasterTemplate($to, $sub, $msg) {
 	
 		mail($to, $this->mailSubject.' '.$sub, $this->getMessageBlock($sub, $msg), $this->getHeaders());
-	
 	}
                                
 }
