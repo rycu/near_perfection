@@ -1,4 +1,4 @@
-<img src="https://urix.co.uk/wp-content/themes/near_perfection/img/near-perfection-logo.svg" alt="near perfection logo" height="50" >
+<img src="https://raw.githubusercontent.com/rycu/near_perfection/master/img/near-perfection-logo.svg" alt="near perfection logo" height="50" >
 
 # near_perfection ~ A basic Wordpress theme
 
