@@ -3,6 +3,7 @@ var inputListObj = {};
 
 var regexListObj = {
 
+	//REGEX can be added to any field name
 	"name" : ["\\S", "required field"],
 	"email" : ["[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,6})", "please enter a valid email address"],
 	"tel" : ["[0-9 (\\)\\+]{10,30}", "please enter a valid telephone number"]
@@ -12,7 +13,7 @@ var regexListObj = {
 function validateValue(name, value) {
 
 	var cleared = true; 
-
+	//check value against regex array
 	if(regexListObj.hasOwnProperty(name)){
 		var thisRegex = new RegExp(regexListObj[name][0]);
 		
@@ -30,12 +31,12 @@ function quickContactSend(formIn){
 	event.preventDefault();
 
 	var cleared = true;
+	
+	// Build Error list if required
 	for (var i=0; i<formIn.length; i++) { 
 	
 		if(formIn[i].name !== ''){ 
-
 			inputListObj[formIn[i].name] = formIn[i].value;
-
 			if(!validateValue(formIn[i].name, formIn[i].value)){
 				cleared = false;
 			} 
@@ -57,6 +58,7 @@ function quickContactSend(formIn){
 
 function apiCall(dataIn){
 
+	//Ajax to server side validation & send 
     jQuery.ajax({
     	type:"POST",                                      
       	url: templateUrl+'/api.php',         

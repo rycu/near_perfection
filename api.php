@@ -14,7 +14,7 @@ function validateValue($name, $value) {
 		
 	$cleared = true;
 
-	//check each field against regex array
+	//check value against regex array
 	if(isset($regexListArr[$name])){
 		if (!preg_match ('/'.$regexListArr[$name].'/', $value)){
 			$cleared = false;
