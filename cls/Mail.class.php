@@ -18,6 +18,7 @@ class Mail extends MailParts{
 		$this->masterTemplate = ob_get_clean();
 	}
 	
+	//Create plain text version of email for non HTML clients.
 	private function getPlaintext($htmlIn){
 	
 		$textOut = str_replace(array('<br />', '</p>', '&nbsp;'), '*xxx*', $htmlIn);
@@ -28,6 +29,7 @@ class Mail extends MailParts{
 		return $textOut;
 	}
 	
+	//Build HTML message from template
 	private function templatefill($sub, $msg){	
 	
 		$templateIn = $this->masterTemplate;
@@ -39,6 +41,7 @@ class Mail extends MailParts{
 		return $templateIn;
 	}
 	
+	//Build header data
 	private function getHeaders(){
 	
 		$headers = "From: ".$this->mailFrom."\n";
@@ -50,6 +53,7 @@ class Mail extends MailParts{
 		return $headers;
 	}
 
+	//Build compleate email
 	private function getMessageBlock($sub, $msg){
 	
 		$htmlMsg = $this->templatefill($sub, $msg);
@@ -67,6 +71,7 @@ class Mail extends MailParts{
 		return $message;
 	}
 	
+	//Send email
 	public function sendMasterTemplate($to, $sub, $msg) {
 	
 		mail($to, $this->mailSubject.' '.$sub, $this->getMessageBlock($sub, $msg), $this->getHeaders());
